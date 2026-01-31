@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Screenshot Tool</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="icon">📸</div>
+      <h1 class="title">Pro Screenshot Tool</h1>
+      <p class="subtitle">Your screenshot will be downloaded automatically</p>
+    </div>
+
+    <div id="main-view">
+      <div class="buttons">
+        <button id="captureVisibleArea" class="btn btn-primary">
+          <span class="btn-icon">📸</span>
+          <span class="btn-text">Capture Page</span>
+        </button>
+
+        <button id="captureSelectedArea" class="btn btn-secondary">
+          <span class="btn-icon">✂️</span>
+          <span class="btn-text">Capture Selection</span>
+        </button>
+
+        <button id="captureTimed" class="btn btn-accent">
+          <span class="btn-icon">⏱️</span>
+          <span class="btn-text">Timed Capture (3s)</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="preview-view" class="hidden">
+      <div class="preview-container">
+        <img id="screenshotPreview" src="" alt="Screenshot Preview">
+      </div>
+      <div class="action-buttons">
+        <button id="downloadBtn" class="btn btn-success">
+          <span class="btn-icon">💾</span> Save Screenshot
+        </button>
+        <button id="backBtn" class="btn btn-outline">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
